@@ -3,6 +3,7 @@ let size;
 let grunt = ['Assets/1.wav', 'Assets/2.wav', 'Assets/3.wav', 'Assets/4.wav', 'Assets/5.wav', 'Assets/6.wav', 'Assets/7.wav', 'Assets/8.wav', 'Assets/9.mp3', 'Assets/10.wav'];
 
 function preload(){
+  //playing sound
   sound = loadSound(grunt[int(random(grunt.length))]);
 }
 
@@ -14,6 +15,7 @@ function setup() {
 
 function draw() {
    background(187, 201, 191);
+   //audio mapping
   let level = amplitude.getLevel();
   size = map(level, 0, 1, 0, 200);
   console.log(size);
