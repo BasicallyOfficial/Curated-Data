@@ -1,8 +1,9 @@
 let sound, amplitude;
 let size;
+let grunt = ['Assets/1.wav', 'Assets/2.wav', 'Assets/3.wav', 'Assets/4.wav', 'Assets/5.wav', 'Assets/6.wav', 'Assets/7.wav', 'Assets/8.wav', 'Assets/9.mp3', 'Assets/10.wav'];
 
 function preload(){
-  sound = loadSound('Assets/2.wav');
+  sound = loadSound(grunt[int(random(grunt.length))]);
 }
 
 function setup() {
