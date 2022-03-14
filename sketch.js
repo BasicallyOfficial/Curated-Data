@@ -1,14 +1,17 @@
 let sound, amplitude;
 let size;
-let grunt = ['Assets/1.wav', 'Assets/2.wav', 'Assets/3.wav', 'Assets/4.wav', 'Assets/5.wav', 'Assets/6.wav', 'Assets/7.wav', 'Assets/8.wav', 'Assets/9.mp3', 'Assets/10.wav'];
+let grunt = [];
+let soundRand = 0;
 
 function preload(){
   //playing sound
-  sound = loadSound(grunt[int(random(grunt.length))]);
+  soundFormats('wav')
+   for (i = 0; i <= 7; i++) {
+  grunt[i] = loadSound('assets/' + [i] + '.wav');
+  }
 }
-
 function setup() {
-    let cnv = createCanvas(500, 500);
+    let cnv = createCanvas(windowWidth*.5, (windowWidth*.5)*.95);
  cnv.mouseClicked(togglePlay);
    amplitude = new p5.Amplitude();
 }
@@ -49,17 +52,17 @@ function drawBlackCircle(circleX, circleY, circleDiameter){
   circle(circleX, circleY, circleDiameter+(size/4));
 }
 
-
 function drawYellowCircle(circleX, circleY, circleDiameter){
   fill(180, 189, 51)
   circle(circleX, circleY, circleDiameter+(size/6))
 }
 
 function togglePlay() {
-  if (sound.isPlaying() ){
-    sound.pause();
+  if (grunt[soundRand].isPlaying() ){
+    grunt[soundRand].pause();
   } else {
-    sound.loop();
+    soundRand = int(random(grunt.length));
+    grunt[soundRand].play();
 		amplitude = new p5.Amplitude();
 		amplitude.setInput(sound);
   }
