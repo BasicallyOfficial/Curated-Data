@@ -4,7 +4,22 @@ html, body {
 display: flex;
 justify-content: center;
 align-items: center;
+background-color:#a8a8a8;
 }
-canvas {
+#myCanvas canvas {
   display: block;
+  margin: auto;
+  border-radius: 400px;
+  padding: 40px;
+  cursor: crosshair;
+}
+
+Header {
+    font-family: "Copperplate", fantasy, monospace;
+    font-size:62px;
+    color:#d47272;
+  Height:30vh;
+  style=text-align:center;
+   border-bottom: 2px solid #d47272;
+   padding-right: 50px;
 }

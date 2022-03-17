@@ -2,6 +2,7 @@ let sound, amplitude;
 let size;
 let grunt = [];
 let soundRand = 0;
+let slider;
 
 function preload(){
   //playing sound
@@ -12,8 +13,12 @@ function preload(){
 }
 function setup() {
     let cnv = createCanvas(windowWidth*.5, (windowWidth*.5)*.95);
+    cnv.parent('myCanvas');
  cnv.mouseClicked(togglePlay);
    amplitude = new p5.Amplitude();
+   slider = createSlider(0, 255, 100);
+ slider.position(width*.2, height*.3);
+ slider.style('width', '180px');
 }
 
 function draw() {
@@ -23,6 +28,7 @@ function draw() {
   size = map(level, 0, 1, 0, 200);
   console.log(size);
   Face();
+  let val = slider.value();
 }
 
 function Face(){
@@ -63,6 +69,7 @@ function togglePlay() {
   } else {
     soundRand = int(random(grunt.length));
     grunt[soundRand].play();
+    grunt[soundRand].setVolume(slider.value());
 		amplitude = new p5.Amplitude();
 		amplitude.setInput(sound);
   }
