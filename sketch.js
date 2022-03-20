@@ -16,9 +16,11 @@ function setup() {
     cnv.parent('myCanvas');
  cnv.mouseClicked(togglePlay);
    amplitude = new p5.Amplitude();
-   slider = createSlider(0, 255, 100);
+  slider = createSlider(0, 2, 1, .01);
+      slider.parent('slider-holder');
  slider.position(width*.2, height*.3);
  slider.style('width', '180px');
+
 }
 
 function draw() {
