@@ -1,0 +1,108 @@
+body {
+  font-family: helvetica, arial, sans-serif;background-color:#a8a8a8;
+    color:#b03568;
+  style=text-align:center;
+  font-size: 20px;
+}
+
+
+Header {
+    font-family: "Oswald", Sans-serif, monospace;
+    font-size:62px;
+    font-weight:bolder;
+   background-color:#a8a8a8;
+    color:#b03568;
+  Height:10vh;
+  style=text-align:center;
+   border-bottom: 2px solid #b03568;
+}
+
+.padding p{
+  max-width:600px;
+}
+
+.centered-text{
+  display:flex;
+  flex-direction:column;
+  text-align:center;
+}
+
+
+.horizontal-row{
+  display:flex;
+  justify-content:space-between;
+
+}
+
+.item{
+  width:50px;
+  height:50px;
+  margin:10px;
+
+}
+
+.layout-container{
+  display:flex;
+  flex-direction:row;
+}
+
+.left-column{
+  width:50%;
+}
+
+.right-column{
+  width:50%;
+}
+
+.left-column, .right-column{
+  padding-top:100px;
+  padding-left:320px;
+  min-height:300px;
+}
+
+.projects{
+
+height:100%;
+display:flex;
+
+}
+
+.padding{
+ padding-left:180px;
+  padding-right:180px;
+  display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+.button{
+  display:inline-block;
+  background-color:#214e64;
+  color:#b03568
+}
+
+.button:hover{
+  background-color:gray;
+}
+
+.button2{
+  display:inline-block;
+  background-color:#a8a8a8;
+  color:#b03568
+ display:flex;
+  flex-direction:column;
+  text-align:center;
+ margin-left: auto;
+margin-right: auto;
+}
+
+.button2:hover{
+  background-color:gray;
+}
+
+.bigpadding{
+   padding-left:400px;
+    padding-right:400px;
+    display:flex;
+  flex-direction:column;
+  align-items:center;
