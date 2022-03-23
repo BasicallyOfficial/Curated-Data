@@ -8,7 +8,7 @@ function preload(){
   //playing sound
   soundFormats('wav')
    for (i = 0; i <= 14; i++) {
-  grunt[i] = loadSound('assets/' + [i] + '.wav');
+  grunt[i] = loadSound('./assets/' + [i] + '.wav');
   }
 }
 function setup() {
